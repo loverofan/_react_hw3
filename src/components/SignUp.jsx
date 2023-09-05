@@ -19,6 +19,7 @@ function SignUp({server}) {
           password,
           nickname
         });
+        console.log("res====>", res); // check res details
         const successMessage = `註冊成功, UID:  + ${res.data.uid}`;
         SetMessage(successMessage);    
       } catch (error) {
