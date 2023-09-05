@@ -4,7 +4,7 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-function SignIn({server}) {
+function SignIn({server, onChangeToken}) {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -18,7 +18,6 @@ function SignIn({server}) {
 
     const signIn = async () => {
         try {
-            console.log('Try to sign in');
             const res = await axios.post((signInAPI), {
                 email,
                 password
@@ -29,6 +28,8 @@ function SignIn({server}) {
             SetMessage(successMessage);
             console.log(successMessage);
             setHasSignIn(true);
+
+            onChangeToken(token);
 
         } catch (error) {
           console.warn(error.response.data); // check error in console
@@ -57,7 +58,8 @@ function SignIn({server}) {
 
 
 SignIn.propTypes = {
-    server: PropTypes.string
+    server: PropTypes.string, 
+    onChangeToken: PropTypes.func
 }
 
 
