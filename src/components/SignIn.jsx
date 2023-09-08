@@ -40,12 +40,12 @@ function SignIn({server, onChangeToken}) {
 
     return(
         <>  <h1>登入</h1>
-            <label htmlFor="email" className='badge'>Email</label>
-            <input type="email" id='email' name='email' placeholder='Email' 
+            <label htmlFor="signInEmail" className='badge'>Email</label>
+            <input type="email" id='signInEmail' name='email' placeholder='Email' 
                    onChange={(e) => setEmail(e.target.value)}/>
 
-            <label htmlFor="password" className='badge' >Password</label>
-            <input type="password" id='password' name='password' placeholder='Password' 
+            <label htmlFor="signInPassword" className='badge' >Password</label>
+            <input type="password" id='signInPassword' name='password' placeholder='Password' 
                    onChange={(e) => setPassword(e.target.value)}/>
 
         <button className='btn btn-primary' 
