@@ -47,8 +47,6 @@ function CheckToken({server, onChangeToken}) {
     return (
         <>
             <h1>驗證</h1>
-            <h1>test090502@gmail.ccc</h1>
-            <h1>1qaz2wsx</h1>
             <input value={token} placeholder='請輸入token' onChange={(e) => setToken(e.target.value)}/>
             <button onClick={checkTokenValid}>檢查Token</button>
             <p>{message}</p>

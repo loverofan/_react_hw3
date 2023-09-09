@@ -113,9 +113,7 @@ function TodoList({server, token}) {
 
     return(
         <>
-            <h1>
-                This is todo list
-            </h1>
+            <h1>Todo list</h1>
             <input type="text" value={newTodo} placeholder="Add new todo" 
                    onChange={(e) => setNewTodo(e.target.value)}/>
             <button onClick={addTodo}>Add todo</button>
